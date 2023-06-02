@@ -1,0 +1,43 @@
+.headerContain {
+	display: flex;
+	justify-content: space-between;
+
+	padding: 20px 40px;
+
+	/* background: red; */
+}
+
+.logoContain h1 {
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+.searchBox {
+	width: 320px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	/* background-color: blue; */
+}
+
+.inputContain {
+	display: flex;
+	align-items: center;
+	
+	border: 2px solid #333;
+	border-radius: 10px;
+	height: 100%;
+	max-width: 260px;
+	width: 100%;
+}
+
+
+.searchInput {
+	border: none;
+	outline: none;
+	border-radius: 10px;
+	padding: 10px 10px 10px 13px;
+	height: 100%;
+	width: 100%;
+}
