@@ -14,9 +14,10 @@ export default function Header() {
 						type='text'
 						placeholder='categoria ou Nome do Componente'
 					/>
-					<AiOutlineSearch 
-					size={24}
-					className={S.searchIcon} />
+					<AiOutlineSearch
+						size={24}
+						className={S.searchIcon}
+					/>
 				</div>
 
 				<div className={S.linksContain}>

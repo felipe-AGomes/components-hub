@@ -1,7 +1,7 @@
 .asideContain {
 	padding: 10px 40px;
-	min-height: 100vh;
-	width: clamp(250px, 100%, 350px);
+	height: calc(100vh - 80px);
+	width: clamp(250px, 30%, 300px);
 	border-right: 1px solid var(--font-primary);
 }
 
@@ -14,6 +14,6 @@
 	color: var(--font-primary);
 }
 
-.active {
-	color: #00dfc4;
+.asideContain ul .active {
+	color: var(--font-secondary);
 }
