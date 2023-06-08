@@ -2,7 +2,7 @@
 	padding: 10px 40px;
 	min-height: 100vh;
 	width: clamp(250px, 100%, 350px);
-	border-right: 1px solid #333;
+	border-right: 1px solid var(--font-primary);
 }
 
 .asideContain ul li {
@@ -10,6 +10,8 @@
 	font-weight: 500;
 	font-size: 1.1rem;
 	cursor: pointer;
+	margin-bottom: 5px;
+	color: var(--font-primary);
 }
 
 .active {

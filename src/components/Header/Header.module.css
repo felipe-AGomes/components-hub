@@ -10,6 +10,7 @@
 .logoContain h1 {
 	font-size: 1.5rem;
 	font-weight: 500;
+	color: var(--font-primary);
 }
 
 .searchBox {
@@ -24,14 +25,13 @@
 .inputContain {
 	display: flex;
 	align-items: center;
-	
-	border: 2px solid #333;
+
+	border: 2px solid var(--font-primary);
 	border-radius: 10px;
 	height: 100%;
 	max-width: 260px;
 	width: 100%;
 }
-
 
 .searchInput {
 	border: none;
