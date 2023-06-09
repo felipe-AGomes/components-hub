@@ -8,6 +8,7 @@ export default function HubComponents({ children }: Props) {
 			style={{
 				display: 'grid',
 				gridTemplateColumns: 'repeat(auto-fill, 300px)',
+				gridTemplateRows: 'min-content',
 				justifyContent: 'center',
 				gap: '20px',
 				flexGrow: '1',

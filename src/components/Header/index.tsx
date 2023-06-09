@@ -5,7 +5,7 @@ export default function Header() {
 	return (
 		<header className={S.headerContain}>
 			<div className={S.logoContain}>
-				<h1>Logo Componentes React</h1>
+				<h1>Componentes React</h1>
 			</div>
 			<div className={S.searchBox}>
 				<div className={S.inputContain}>
