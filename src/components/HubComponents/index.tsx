@@ -7,10 +7,12 @@ export default function HubComponents({ children }: Props) {
 		<section
 			style={{
 				display: 'grid',
-				gridTemplateColumns: 'repeat(auto-fill, 1fr)',
+				gridTemplateColumns: 'repeat(auto-fill, 300px)',
 				justifyContent: 'center',
 				gap: '20px',
 				flexGrow: '1',
+
+				padding: '20px',
 			}}
 		>
 			{children}

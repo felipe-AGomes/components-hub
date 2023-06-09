@@ -1,9 +1,9 @@
-import CurrentPageContextProvider from '@/context/currentPageContext';
+import AppContext from '@/context/AppContext';
 
 type Props = {
 	children: React.ReactNode;
 };
 
 export default function ContextProviders({ children }: Props) {
-	return <CurrentPageContextProvider>{children}</CurrentPageContextProvider>;
+	return <AppContext>{children}</AppContext>;
 }

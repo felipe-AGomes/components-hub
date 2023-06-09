@@ -1,11 +1,9 @@
 import { useState } from 'react';
 import S from './AsideContent.module.css';
-import useCurrentPageContext from '@/hooks/useCurrentPageContext';
+import useCurrentPageContext from '@/hooks/useAppContext';
 
 export default function AsideContent() {
-	const { currentPage, setCurrentPage } = useCurrentPageContext();
-
-	const categories = ['card', 'formularios', 'loading', 'listas']; // Deve conter todas as categorias existentes
+	const { currentPage, components, setCurrentPage } = useCurrentPageContext();
 
 	const handleClickCategory = (category: string) => {
 		setCurrentPage(category);
@@ -14,10 +12,18 @@ export default function AsideContent() {
 	return (
 		<aside className={S.asideContain}>
 			<ul>
-				{categories.map((category) => {
+				<li
+					className={`${'início' === currentPage ? S.active : ''}`}
+					onClick={() => {
+						handleClickCategory('início');
+					}}
+				>
+					{'início'.toUpperCase()}
+				</li>
+				{components.map(({ category, id }) => {
 					return (
 						<li
-							key={category}
+							key={id}
 							className={`${category === currentPage ? S.active : ''}`}
 							onClick={() => {
 								handleClickCategory(category);
