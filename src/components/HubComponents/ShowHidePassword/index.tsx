@@ -9,7 +9,10 @@ export default function ShowHidePassword() {
 	};
 
 	return (
-		<section className={S.componentPage}>
+		<section
+			className='component__page'
+			id={S.contain}
+		>
 			<div className={S.inputBox}>
 				<input
 					type={`${isHide ? 'password' : 'text'}`}

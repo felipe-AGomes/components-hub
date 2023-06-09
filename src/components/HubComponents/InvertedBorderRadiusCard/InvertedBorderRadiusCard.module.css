@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+#contain {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #bfc0c0;
+
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	position: relative;
+	width: 128px;
+	height: 150px;
+}
+
+.card .imgBx {
+	position: relative;
+	width: 100%;
+	height: 86px;
+	border-radius: 6px;
+	background: url(/house.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.card .imgBx::before {
+	content: '';
+	position: absolute;
+	bottom: 28px;
+	border-radius: 50%;
+	height: 10px;
+	width: 10px;
+	box-shadow: -4px 4px 0 #bfc0c0; /* same background color */
+
+	/* background: chartreuse; */
+}
+
+.card .imgBx::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	border-radius: 50%;
+	height: 10px;
+	width: 10px;
+	box-shadow: -4px 4px 0 #bfc0c0; /* same background color */
+
+	/* background: chartreuse; */
+}
+
+.card .content {
+	position: relative;
+	width: 100%;
+	height: 60px;
+	border-radius: 6px;
+	border-top-left-radius: 0;
+	padding: 0 14px;
+
+	background: #fff;
+}
+
+.card .content ul {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+
+	margin-top: 8px;
+}
+
+.card .content ul li {
+	list-style: none;
+	color: #2d3142;
+	font-weight: 500;
+	font-size: 0.4rem;
+}
+
+.card .content .price {
+	position: absolute;
+	height: 32px;
+	width: 50%;
+	left: 0;
+	top: -32px;
+	border-top: 4px solid #bfc0c0; /* same background color */
+	border-right: 4px solid #bfc0c0; /* same background color */
+	border-top-right-radius: 10px;
+
+	background: #fff;
+}
+
+.card .content .price::before {
+	content: '';
+	position: absolute;
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+	box-shadow: -4px -4px 0 #bfc0c0; /* same background color */
+
+	/* background: chartreuse; */
+}
+
+.card .content .price::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: -10px;
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+	box-shadow: -4px 4px 0 #fff; /* same background color */
+
+	/* background: chartreuse; */
+}
+
+.card .content .price a {
+	display: block;
+	padding: 4px 8px;
+	color: #fff;
+	background: #2d3142;
+	margin: 6px;
+	font-weight: 500;
+	border-radius: 2.8px;
+	text-decoration: none;
+	font-size: 0.4rem;
+}

@@ -1,5 +1,6 @@
 import { ComponentsProps } from '@/@types';
 import ShowHidePassword from '@/components/HubComponents/ShowHidePassword';
+import InvertedBorderRadiusCard from '@/components/HubComponents/InvertedBorderRadiusCard';
 import { createContext, useState } from 'react';
 
 type AppContextProps = {
@@ -18,6 +19,12 @@ const components: ComponentsProps[] = [
 		component: <ShowHidePassword />,
 		category: 'formularios',
 		name: 'Show Hide Password',
+	},
+	{
+		id: 'invertedBorderRadiusCard',
+		component: <InvertedBorderRadiusCard />,
+		category: 'card',
+		name: 'Inverted Border Radius Card',
 	},
 ];
 

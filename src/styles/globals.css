@@ -17,3 +17,13 @@ body {
 	background: var(--background-primary);
 	min-height: 100vh;
 }
+
+.component__page {
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	aspect-ratio: 16/9;
+	padding: 10px;
+}
