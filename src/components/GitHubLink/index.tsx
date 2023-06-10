@@ -1,5 +1,4 @@
 import { AiFillGithub } from 'react-icons/ai';
-import S from './GitHubLink.module.css';
 
 export default function GitHubLink() {
 	return (

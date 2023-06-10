@@ -1,6 +1,5 @@
 import { MiniatureProps } from '@/@types';
 import S from './ContainMiniature.module.css';
-import { useRouter } from 'next/router';
 
 type Props = {
 	children: React.ReactNode;
