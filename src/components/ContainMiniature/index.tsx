@@ -13,14 +13,12 @@ export default function ContainMiniature({
 	miniature,
 	style,
 }: Props) {
-	const router = useRouter();
-
 	const handleClickVizualizar = (miniatureId: string) => {
-		router.push(`/project/${miniatureId}`);
+		window.open(`/project/${miniatureId}`, '_blank');
 	};
 
 	const handleClickRepositorio = (miniatureRepo: string) => {
-		console.log('Repositório');
+		console.log('Repositório: ', miniatureRepo);
 	};
 
 	return (
