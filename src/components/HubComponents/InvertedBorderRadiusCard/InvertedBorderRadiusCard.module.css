@@ -120,3 +120,126 @@
 	font-size: 0.4rem;
 }
 
+/*below is the standard component*/
+#contain {
+	background: #bfc0c0;
+	height: 100vh;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	position: relative;
+	width: 320px;
+	height: 375px;
+}
+
+.card .imgBx {
+	position: relative;
+	width: 100%;
+	height: 215px;
+	border-radius: 15px;
+	background: url(/InvertedBorderRadiusCard/house.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.card .imgBx::before {
+	content: '';
+	position: absolute;
+	bottom: 70px;
+	border-radius: 50%;
+	height: 25px;
+	width: 25px;
+	box-shadow: -10px 10px 0 #bfc0c0; /* same background color */
+
+	/* background: chartreuse; */
+}
+
+.card .imgBx::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	border-radius: 50%;
+	height: 25px;
+	width: 25px;
+	box-shadow: -10px 10px 0 #bfc0c0; /* same background color */
+
+	/* background: chartreuse; */
+}
+
+.card .content {
+	position: relative;
+	width: 100%;
+	height: 150px;
+	border-radius: 15px;
+	border-top-left-radius: 0;
+	padding: 0 35px;
+
+	background: #fff;
+}
+
+.card .content ul {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	
+	margin-top: 20px;
+}
+
+.card .content ul li {
+	list-style: none;
+	color: #2d3142;
+	font-weight: 600;
+}
+
+.card .content .price {
+	position: absolute;
+	height: 80px;
+	width: 50%;
+	left: 0;
+	top: -80px;
+	border-top: 10px solid #bfc0c0; /* same background color */
+	border-right: 10px solid #bfc0c0; /* same background color */
+	border-top-right-radius: 25px;
+
+	background: #fff;
+}
+
+.card .content .price::before {
+	content: '';
+	position: absolute;
+	height: 25px;
+	width: 25px;
+	border-radius: 50%;
+	box-shadow: -10px -10px 0 #bfc0c0; /* same background color */
+
+	/* background: chartreuse; */
+}
+
+.card .content .price::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: -25px;
+	height: 25px;
+	width: 25px;
+	border-radius: 50%;
+	box-shadow: -10px 10px 0 #fff; /* same background color */
+
+	/* background: chartreuse; */
+}
+
+.card .content .price a {
+	display: block;
+	padding: 10px 20px;
+	color: #fff;
+	background: #2d3142;
+	margin: 15px;
+	font-weight: 500;
+	border-radius: 7px;
+	text-decoration: none;
+}

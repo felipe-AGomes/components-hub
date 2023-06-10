@@ -2,21 +2,25 @@
 import ContainMiniature from '@/components/ContainMiniature';
 import S from './InvertedBorderRadiusCard.module.css';
 import useAppContext from '@/hooks/useAppContext';
+import { MiniatureProps } from '@/@types';
+import { useEffect } from 'react';
 
 type Props = {
-	isMiniature: boolean;
+	isMiniature?: boolean;
+	miniature?: MiniatureProps;
 };
 
-export default function InvertedBorderRadiusCard({ isMiniature }: Props) {
-	const { miniatures } = useAppContext();
+export default function InvertedBorderRadiusCard({
+	isMiniature,
+	miniature,
+}: Props) {
+	const { font } = useAppContext();
 
-	const miniature = miniatures.find(
-		(miniature) => miniature.id === 'invertedBorderRadiusCard',
-	);
-
-	if (!miniature) {
-		throw new Error('Miniatura não existe');
-	}
+	useEffect(() => {
+		if (!miniature) {
+			return;
+		}
+	}, [miniature]);
 
 	return (
 		<>
@@ -53,13 +57,8 @@ export default function InvertedBorderRadiusCard({ isMiniature }: Props) {
 				>
 					<div className={S.box}>
 						<div className={S.card}>
-							<div className={S.imgBx}>
-								<img
-									src='/InvertedBorderRadiusCard/house.jpg'
-									alt='house image'
-								/>
-							</div>
-							<div className={S.content}>
+							<div className={S.imgBx}></div>
+							<div className={`${S.content} ${font.poppins.className}`}>
 								<span className={S.price}>
 									<a href='#'>$1.000,00</a>
 								</span>

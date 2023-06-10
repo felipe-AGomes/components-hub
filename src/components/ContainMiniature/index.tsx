@@ -4,7 +4,7 @@ import S from './ContainMiniature.module.css';
 type Props = {
 	children: React.ReactNode;
 	style?: React.CSSProperties;
-	miniature: MiniatureProps;
+	miniature?: MiniatureProps;
 };
 
 export default function ContainMiniature({
@@ -29,7 +29,7 @@ export default function ContainMiniature({
 			<div className={S.containButtonMiniature}>
 				<button
 					onClick={() => {
-						handleClickVizualizar(miniature.id);
+						handleClickVizualizar(miniature ? miniature.id : '');
 					}}
 					type='button'
 					style={{ fontFamily: 'inherit' }}
@@ -38,7 +38,7 @@ export default function ContainMiniature({
 				</button>
 				<button
 					onClick={() => {
-						handleClickRepositorio(miniature.repo);
+						handleClickRepositorio(miniature ? miniature.repo : '');
 					}}
 					type='button'
 					style={{ fontFamily: 'inherit' }}

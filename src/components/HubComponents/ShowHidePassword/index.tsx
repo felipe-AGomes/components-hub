@@ -1,26 +1,27 @@
 import ContainMiniature from '@/components/ContainMiniature';
 import S from './ShowHidePassword.module.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import useAppContext from '@/hooks/useAppContext';
+import { MiniatureProps } from '@/@types';
 
 type Props = {
 	isMiniature?: boolean;
+	miniature?: MiniatureProps;
 };
 
-export default function ShowHidePassword({ isMiniature }: Props) {
+export default function ShowHidePassword({ isMiniature, miniature }: Props) {
+	const { font } = useAppContext();
 	const [isHide, setIsHide] = useState(true);
-	const { miniatures } = useAppContext();
 
-	const miniature = miniatures.find(
-		(miniature) => miniature.id === 'invertedBorderRadiusCard',
-	);
-
-	if (!miniature) {
-		throw new Error('Miniatura não existe');
-	}
 	const showHide = () => {
 		setIsHide(!isHide);
 	};
+
+	useEffect(() => {
+		if (!miniature) {
+			return;
+		}
+	}, [miniature]);
 
 	return (
 		<>
@@ -89,7 +90,7 @@ export default function ShowHidePassword({ isMiniature }: Props) {
 					className='component__page'
 					id={S.contain}
 				>
-					<div className={S.inputBox}>
+					<div className={`${S.inputBox} ${font.poppins.className}`}>
 						<input
 							type={`${isHide ? 'password' : 'text'}`}
 							required
