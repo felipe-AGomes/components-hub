@@ -1,7 +1,7 @@
-import { ComponentsProps } from '@/@types';
+import { MiniatureProps } from '@/@types';
 
 export const filterCategory = (
-	categories: ComponentsProps[],
+	categories: MiniatureProps[],
 	filter: string,
 ) => {
 	return categories.filter(({ category }) => category === filter);

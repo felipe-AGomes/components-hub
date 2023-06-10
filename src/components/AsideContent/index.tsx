@@ -1,9 +1,8 @@
-import { useState } from 'react';
 import S from './AsideContent.module.css';
 import useCurrentPageContext from '@/hooks/useAppContext';
 
 export default function AsideContent() {
-	const { currentPage, components, setCurrentPage } = useCurrentPageContext();
+	const { currentPage, miniatures, setCurrentPage } = useCurrentPageContext();
 
 	const handleClickCategory = (category: string) => {
 		setCurrentPage(category);
@@ -20,7 +19,7 @@ export default function AsideContent() {
 				>
 					{'início'.toUpperCase()}
 				</li>
-				{components.map(({ category, id }) => {
+				{miniatures.map(({ category, id }) => {
 					return (
 						<li
 							key={id}
