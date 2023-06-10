@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+#containMiniature {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	position: relative;
+	overflow: hidden;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+#containMiniature .containButtonMiniature {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+
+	width: 100%;
+	height: 40%;
+	background: #fff;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transform: translateY(70px);
+	opacity: 0;
+	z-index: 1;
+	transition: 0.2s;
+}
+
+#containMiniature:hover .containButtonMiniature {
+	transition: 0.2s;
+	transform: translateY(0);
+	opacity: 1;
+}
+
+.containButtonMiniature button {
+	padding: 7px 15px;
+	font-size: 1em;
+	font-weight: 500;
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+	background: var(--font-secondary);
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+}
