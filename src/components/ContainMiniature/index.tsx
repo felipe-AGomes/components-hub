@@ -33,6 +33,7 @@ export default function ContainMiniature({
 						handleClickVizualizar(miniature.id);
 					}}
 					type='button'
+					style={{ fontFamily: 'inherit' }}
 				>
 					Vizualizar
 				</button>
@@ -41,6 +42,7 @@ export default function ContainMiniature({
 						handleClickRepositorio(miniature.repo);
 					}}
 					type='button'
+					style={{ fontFamily: 'inherit' }}
 				>
 					Repositório
 				</button>

@@ -1,5 +1,4 @@
 import { Poppins } from '@next/font/google';
-import Header from '../Header';
 import React from 'react';
 
 const poppins = Poppins({
