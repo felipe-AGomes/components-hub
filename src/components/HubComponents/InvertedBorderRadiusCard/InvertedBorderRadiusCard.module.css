@@ -1,16 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 
-#contain {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: #bfc0c0;
-
-	box-sizing: border-box;
-	font-family: 'Poppins', sans-serif;
-}
-
-.card {
+.cardMiniature {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -20,17 +10,19 @@
 	height: 150px;
 }
 
-.card .imgBx {
+.imgBxMiniature {
 	position: relative;
 	width: 100%;
 	height: 86px;
 	border-radius: 6px;
-	background: url(/InvertedBorderRadiusCard/house.jpg);
-	background-size: contain;
-	background-repeat: no-repeat;
+	overflow: hidden;
 }
 
-.card .imgBx::before {
+.imgBxMiniature img {
+	width: 100%;
+}
+
+.imgBxMiniature::before {
 	content: '';
 	position: absolute;
 	bottom: 28px;
@@ -42,7 +34,7 @@
 	/* background: chartreuse; */
 }
 
-.card .imgBx::after {
+.imgBxMiniature::after {
 	content: '';
 	position: absolute;
 	bottom: 0;
@@ -55,7 +47,7 @@
 	/* background: chartreuse; */
 }
 
-.card .content {
+.contentMiniature {
 	position: relative;
 	width: 100%;
 	height: 60px;
@@ -66,7 +58,7 @@
 	background: #fff;
 }
 
-.card .content ul {
+.contentMiniature ul {
 	display: flex;
 	flex-direction: column;
 	gap: 4px;
@@ -74,14 +66,14 @@
 	margin-top: 8px;
 }
 
-.card .content ul li {
+.contentMiniature ul li {
 	list-style: none;
 	color: #2d3142;
 	font-weight: 500;
 	font-size: 0.4rem;
 }
 
-.card .content .price {
+.priceMiniature {
 	position: absolute;
 	height: 32px;
 	width: 50%;
@@ -94,7 +86,7 @@
 	background: #fff;
 }
 
-.card .content .price::before {
+.priceMiniature::before {
 	content: '';
 	position: absolute;
 	height: 10px;
@@ -105,7 +97,7 @@
 	/* background: chartreuse; */
 }
 
-.card .content .price::after {
+.priceMiniature::after {
 	content: '';
 	position: absolute;
 	bottom: 0;
@@ -118,7 +110,7 @@
 	/* background: chartreuse; */
 }
 
-.card .content .price a {
+.priceMiniature a {
 	display: block;
 	padding: 4px 8px;
 	color: #fff;
@@ -129,3 +121,4 @@
 	text-decoration: none;
 	font-size: 0.4rem;
 }
+

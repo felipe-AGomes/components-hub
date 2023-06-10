@@ -19,11 +19,19 @@ body {
 }
 
 .component__page {
-	
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	
+
+	width: 100%;
+	height: 100vh;
+}
+
+.component__page-miniature {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
 	aspect-ratio: 16/9;
 	padding: 10px;
 	border-radius: 5px;
