@@ -17,7 +17,7 @@ export default function ContainMiniature({
 	};
 
 	const handleClickRepositorio = (miniatureRepo: string) => {
-		console.log('Repositório: ', miniatureRepo);
+		window.open(miniatureRepo, '_blank');
 	};
 
 	return (

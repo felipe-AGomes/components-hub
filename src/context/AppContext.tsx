@@ -27,14 +27,16 @@ const miniatures: MiniatureProps[] = [
 		component: <ShowHidePassword />,
 		category: 'formularios',
 		name: 'Show Hide Password',
-		repo: '#',
+		repo:
+			'https://github.com/felipe-AGomes/style-examples/tree/master/show-hide-password-input',
 	},
 	{
 		id: 'invertedBorderRadiusCard',
 		component: <InvertedBorderRadiusCard />,
 		category: 'card',
 		name: 'Inverted Border Radius Card',
-		repo: '#',
+		repo:
+			'https://github.com/felipe-AGomes/style-examples/tree/master/inverted-border-radius-card',
 	},
 ];
 
