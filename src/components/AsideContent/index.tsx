@@ -1,3 +1,4 @@
+import { removeDuplicate } from '@/utils/removeDuplicate';
 import S from './AsideContent.module.css';
 import useCurrentPageContext from '@/hooks/useAppContext';
 
@@ -7,6 +8,8 @@ export default function AsideContent() {
 	const handleClickCategory = (category: string) => {
 		setCurrentPage(category);
 	};
+
+	const uniqueCategories = removeDuplicate(miniatures);
 
 	return (
 		<aside className={S.asideContain}>
@@ -19,10 +22,10 @@ export default function AsideContent() {
 				>
 					{'início'.toUpperCase()}
 				</li>
-				{miniatures.map(({ category, id }) => {
+				{uniqueCategories.map((category) => {
 					return (
 						<li
-							key={id}
+							key={category}
 							className={`${category === currentPage ? S.active : ''}`}
 							onClick={() => {
 								handleClickCategory(category);

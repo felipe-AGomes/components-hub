@@ -26,10 +26,25 @@ export default function InvertedBorderRadius({
 		<>
 			{isMiniature ? (
 				<ContainMiniature
-					style={{ background: '#bfc0c0' }}
+					style={{ background: '#333' }}
 					miniature={miniature}
 				>
-					<div></div>
+					<div className={`${S.cardContainMiniature} ${font.poppins.className}`}>
+						<div className={S.iconContainMiniature}>
+							<HiOutlineRocketLaunch
+								size={17}
+								color='#fff'
+							/>
+						</div>
+						<div className={S.contentMiniature}>
+							<h3>Launch</h3>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi neque
+								consequatur autem quae delectus
+							</p>
+							<button type='button'>Launch</button>
+						</div>
+					</div>
 				</ContainMiniature>
 			) : (
 				<section
@@ -38,7 +53,10 @@ export default function InvertedBorderRadius({
 				>
 					<div className={`${S.cardContain} ${font.poppins.className}`}>
 						<div className={S.iconContain}>
-							<HiOutlineRocketLaunch size={42} color='#fff' />
+							<HiOutlineRocketLaunch
+								size={42}
+								color='#fff'
+							/>
 						</div>
 						<div className={S.content}>
 							<h3>Launch</h3>
