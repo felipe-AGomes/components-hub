@@ -1,0 +1,86 @@
+#contain {
+	background: #333;
+	height: 100vh;
+}
+
+.cardContain {
+	position: relative;
+	aspect-ratio: 3/4;
+	height: 100%;
+	max-height: 350px;
+	border-radius: 10px;
+	border: 5px solid greenyellow;
+	border-top-left-radius: 50px;
+	padding: 40px 30px;
+}
+
+.cardContain::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 100px;
+	width: 20px;
+	height: 20px;
+	border-top-left-radius: 50%;
+	box-shadow: -5px -5px greenyellow;
+}
+
+.cardContain::before {
+	content: '';
+	position: absolute;
+	top: 100px;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	border-top-left-radius: 50%;
+	box-shadow: -5px -5px greenyellow;
+}
+
+.iconContain {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100px;
+	height: 100px;
+	border-top-left-radius: 44px;
+	border-bottom-right-radius: 44px;
+	border-top-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border: 6px solid greenyellow;
+}
+
+.content {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex-direction: column;
+	gap: 10px;
+	
+	height: 100%;
+	color: #fff;
+	text-align: center;
+}
+
+.content h3 {
+	text-transform: uppercase;
+	font-size: 1rem;
+}
+
+.content p {
+	font-size: 0.9rem;
+}
+
+.content button {
+	background: greenyellow;
+	color: #333;
+	font-weight: bold;
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 30px;
+	
+}
