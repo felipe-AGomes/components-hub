@@ -1,0 +1,171 @@
+#contain {
+	background: #000;
+	height: 100vh;
+}
+
+.pageContain {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2px;
+	align-items: center;
+	justify-content: center;
+
+	overflow: hidden;
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+}
+
+.pageContain::before {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(#000, #0f0, #000);
+	animation: pulse 2.5s infinite linear;
+}
+
+.pageContain span {
+	display: block;
+	width: calc(6.25vw - 2px);
+	height: calc(6.25vw - 2px);
+	background: #181818;
+	z-index: 1;
+	transition: 1.5s;
+}
+
+.pageContain span:hover {
+	background: #0f0;
+	transition: 0s;
+}
+
+.pageContain .formContain {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 20px;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	max-width: 400px;
+	padding: 40px;
+	transform: translate(-50%, -50%);
+	background: #222;
+	border-radius: 5px;
+	z-index: 2;
+}
+
+.pageContain .formContain h1 {
+	text-transform: uppercase;
+	font-size: 2rem;
+	color: #0f0;
+}
+
+.pageContain .formContain form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 20px;
+
+	width: 100%;
+}
+
+.pageContain .formContain form .inputContain {
+	position: relative;
+	width: 100%;
+}
+.pageContain .formContain form .inputContain label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #fff7;
+	transform: translate(10px, 13px);
+	transition: 0.1s;
+}
+
+.pageContain .formContain form .inputContain input {
+	width: 100%;
+	padding: 25px 10px 7.5px;
+	background: #333;
+	color: #fff;
+	font-size: 0.9rem;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+
+.pageContain .formContain form .inputContain input:focus + label,
+.pageContain .formContain form .inputContain input:valid + label {
+	position: absolute;
+	font-size: 0.7rem;
+	color: #fff;
+	transform: translate(10px, 3px);
+}
+
+.pageContain .formContain form .links {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.pageContain .formContain form .links a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.pageContain .formContain form .links a.register {
+	color: #0f0;
+}
+
+.pageContain .formContain form button {
+	width: 100%;
+	color: #111;
+	letter-spacing: 0.05rem;
+	font-size: 1rem;
+	border-radius: 5px;
+	font-weight: bold;
+	background: #0f0;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 10px;
+}
+
+@keyframes pulse {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(100%);
+	}
+}
+
+@media (max-width: 900px) {
+	.pageContain span {
+		width: calc(10vw - 2px);
+		height: calc(10vw - 2px);
+	}
+}
+
+@media (max-width: 600px) {
+	.pageContain span {
+		width: calc(12.5vw - 2px);
+		height: calc(12.5vw - 2px);
+	}
+}
+
+@media (max-width: 400px) {
+	.pageContain .formContain {
+		padding: 20px;
+	}
+
+	.pageContain span {
+		width: calc(20vw - 2px);
+		height: calc(20vw - 2px);
+	}
+}

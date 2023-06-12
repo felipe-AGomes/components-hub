@@ -5,6 +5,7 @@ import { createContext, useState } from 'react';
 import { Poppins } from '@next/font/google';
 import { NextFont } from '@next/font';
 import InvertedBorderRadius from '@/components/HubComponents/InvertedBorderRadius';
+import MatrixLoginForm from '@/components/HubComponents/MatrixLoginForm';
 
 const poppins = Poppins({
 	weight: ['300', '400', '500', '600', '700', '800', '900'],
@@ -46,6 +47,14 @@ const miniatures: MiniatureProps[] = [
 		name: 'Inverted Border Radius',
 		repo:
 			'https://github.com/felipe-AGomes/components-hub/tree/master/src/components/HubComponents/InvertedBorderRadius',
+	},
+	{
+		id: 'MatrixLoginForm',
+		component: <MatrixLoginForm />,
+		category: 'login page',
+		name: 'Matrix Login Form',
+		repo:
+			'https://github.com/felipe-AGomes/components-hub/tree/master/src/components/HubComponents/MatrixLoginForm',
 	},
 ];
 
