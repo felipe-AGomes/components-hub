@@ -1,6 +1,8 @@
 #contain {
 	background: #000;
 	height: 100vh;
+	overflow: hidden;
+	position: relative;
 }
 
 .pageContain {
@@ -10,10 +12,11 @@
 	align-items: center;
 	justify-content: center;
 
+	transform: rotate(45deg);
 	overflow: hidden;
-	position: relative;
-	height: 100vh;
-	width: 100vw;
+	position: absolute;
+	height: calc(100vw + 500px);
+	width: calc(100vw + 500px);
 }
 
 .pageContain::before {
@@ -21,7 +24,7 @@
 	content: '';
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(#000, #0f0, #000);
+	background: linear-gradient(#000, var(--font-vibrant), #000);
 	animation: pulse 2.5s infinite linear;
 }
 
@@ -35,7 +38,7 @@
 }
 
 .pageContain span:hover {
-	background: #0f0;
+	background: var(--font-vibrant);
 	transition: 0s;
 }
 
@@ -52,7 +55,7 @@
 	width: 100%;
 	max-width: 400px;
 	padding: 40px;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%) rotate(-45deg);
 	background: #222;
 	border-radius: 5px;
 	z-index: 2;
@@ -61,7 +64,7 @@
 .pageContain .formContain h1 {
 	text-transform: uppercase;
 	font-size: 2rem;
-	color: #0f0;
+	color: var(--font-vibrant);
 }
 
 .pageContain .formContain form {
@@ -119,7 +122,7 @@
 }
 
 .pageContain .formContain form .links a.register {
-	color: #0f0;
+	color: var(--font-vibrant);
 }
 
 .pageContain .formContain form button {
@@ -129,7 +132,7 @@
 	font-size: 1rem;
 	border-radius: 5px;
 	font-weight: bold;
-	background: #0f0;
+	background: var(--font-vibrant);
 	border: none;
 	outline: none;
 	cursor: pointer;
@@ -165,6 +168,198 @@
 	}
 
 	.pageContain span {
+		width: calc(20vw - 2px);
+		height: calc(20vw - 2px);
+	}
+}
+
+/*below is the standard component*/
+.contain {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.pageContainMiniature {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1px;
+	align-items: center;
+	justify-content: center;
+
+	transform: rotate(45deg) translateX(-100px);
+	overflow: hidden;
+	position: absolute;
+	height: calc(100% + 300px);
+	width: calc(100% + 200px);
+}
+
+.pageContainMiniature::before {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(#000, var(--font-vibrant), #000);
+	animation: pulse 2.5s infinite linear;
+}
+
+.pageContainMiniature span {
+	aspect-ratio: 1/1;
+	display: block;
+	width: calc(6.25% - 2px);
+	background: #181818;
+	z-index: 1;
+	transition: 1.5s;
+}
+
+.pageContainMiniature span:hover {
+	background: var(--font-vibrant);
+	transition: 0s;
+}
+
+.pageContainMiniature .formContainMiniature {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 4px;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	max-width: 80px;
+	padding: 8px;
+	transform: translate(-140%, -90%) rotate(-45deg);
+	background: #222;
+	border-radius: 3px;
+	z-index: 2;
+}
+
+.pageContainMiniature .formContainMiniature h1 {
+	text-transform: uppercase;
+	font-size: 0.4rem;
+	color: var(--font-vibrant);
+}
+
+.pageContainMiniature .formContainMiniature form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 4px;
+
+	width: 100%;
+}
+
+.pageContainMiniature .formContainMiniature form .inputContainMiniature {
+	position: relative;
+	width: 100%;
+}
+.pageContainMiniature .formContainMiniature form .inputContainMiniature label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #fff7;
+	transform: translate(2px, 13px);
+	transition: 0.1s;
+	font-size: 0.2rem;
+}
+
+.pageContainMiniature .formContainMiniature form .inputContainMiniature input {
+	width: 100%;
+	padding: 5px 2px 1.5px;
+	background: #333;
+	color: #fff;
+	font-size: 0.18rem;
+	border: none;
+	outline: none;
+	border-radius: 3px;
+}
+
+.pageContainMiniature
+	.formContainMiniature
+	form
+	.inputContainMiniature
+	input:focus
+	+ label,
+.pageContainMiniature
+	.formContainMiniature
+	form
+	.inputContainMiniature
+	input:valid
+	+ label {
+	position: absolute;
+	font-size: 0.14rem;
+	color: #fff;
+	transform: translate(2px, 10px);
+}
+
+.pageContainMiniature .formContainMiniature form .linksMiniature {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.pageContainMiniature .formContainMiniature form .linksMiniature a {
+	text-decoration: none;
+	font-size: 0.2rem;
+	color: #fff;
+}
+
+.pageContainMiniature
+	.formContainMiniature
+	form
+	.linksMiniature
+	a.registerMiniature {
+	color: var(--font-vibrant);
+}
+
+.pageContainMiniature .formContainMiniature form button {
+	width: 100%;
+	color: #111;
+	letter-spacing: 0.01rem;
+	font-size: 0.2rem;
+	border-radius: 3px;
+	font-weight: bold;
+	background: var(--font-vibrant);
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 2px;
+}
+
+@keyframes pulse {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(100%);
+	}
+}
+
+@media (max-width: 900px) {
+	.pageContainMiniature span {
+		width: calc(10vw - 2px);
+		height: calc(10vw - 2px);
+	}
+}
+
+@media (max-width: 600px) {
+	.pageContainMiniature span {
+		width: calc(12.5vw - 2px);
+		height: calc(12.5vw - 2px);
+	}
+}
+
+@media (max-width: 400px) {
+	.pageContainMiniature .formContainMiniature {
+		padding: 20px;
+	}
+
+	.pageContainMiniature span {
 		width: calc(20vw - 2px);
 		height: calc(20vw - 2px);
 	}
