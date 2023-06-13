@@ -176,7 +176,7 @@
 /*below is the standard component*/
 .contain {
 	height: 100%;
-	width: 100%;
+	width: 300px;
 	overflow: hidden;
 	position: relative;
 }
@@ -207,7 +207,7 @@
 .pageContainMiniature span {
 	aspect-ratio: 1/1;
 	display: block;
-	width: calc(6.25% - 2px);
+	height: calc(6.25% - 2px);
 	background: #181818;
 	z-index: 1;
 	transition: 1.5s;
@@ -329,38 +329,4 @@
 	outline: none;
 	cursor: pointer;
 	padding: 2px;
-}
-
-@keyframes pulse {
-	0% {
-		transform: translateY(-100%);
-	}
-	100% {
-		transform: translateY(100%);
-	}
-}
-
-@media (max-width: 900px) {
-	.pageContainMiniature span {
-		width: calc(10vw - 2px);
-		height: calc(10vw - 2px);
-	}
-}
-
-@media (max-width: 600px) {
-	.pageContainMiniature span {
-		width: calc(12.5vw - 2px);
-		height: calc(12.5vw - 2px);
-	}
-}
-
-@media (max-width: 400px) {
-	.pageContainMiniature .formContainMiniature {
-		padding: 20px;
-	}
-
-	.pageContainMiniature span {
-		width: calc(20vw - 2px);
-		height: calc(20vw - 2px);
-	}
 }
