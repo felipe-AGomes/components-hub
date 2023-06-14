@@ -39,8 +39,7 @@ export default function InvertedBorderRadius({
 						<div className={S.contentMiniature}>
 							<h3>Launch</h3>
 							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi neque
-								consequatur autem quae delectus
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
 							</p>
 							<button type='button'>Launch</button>
 						</div>
