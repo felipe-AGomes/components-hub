@@ -29,6 +29,7 @@ export default function AsideContent() {
 				<li
 					className={`${'início' === currentPage ? S.active : ''}`}
 					onClick={() => {
+						setIsMenuOpen(false);
 						handleClickCategory('início');
 					}}
 				>
