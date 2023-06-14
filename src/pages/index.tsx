@@ -4,17 +4,33 @@ import HtmlHeader from '@/components/HtmlHeader';
 import HubComponents from '@/components/HubComponents';
 import useAppContext from '@/hooks/useAppContext';
 import { filterCategory } from '@/utils/filterCategory';
+import { useEffect } from 'react';
 
 export default function Home() {
-	const { currentPage, miniatures, font } = useAppContext();
+	const { currentPage, miniatures, font, isMenuOpen, setWindowWidth } =
+		useAppContext();
 	const filteredCategory = filterCategory(miniatures, currentPage);
+
+	useEffect(() => {
+		setWindowWidth(window.innerWidth);
+		window.addEventListener('resize', () => {
+			setWindowWidth(window.innerWidth);
+		});
+	});
 
 	return (
 		<>
 			<HtmlHeader />
 			<main className={font.poppins.className}>
 				<Header />
-				<div style={{ display: 'flex' }}>
+				<div
+					style={{
+						display: 'flex',
+						position: 'fixed',
+						width: '100vw',
+						overflowY: isMenuOpen ? 'hidden' : 'scroll',
+					}}
+				>
 					<AsideContent />
 					<HubComponents>
 						{currentPage === 'início'

@@ -1,7 +1,7 @@
 import { MiniatureProps } from '@/@types';
 import ShowHidePassword from '@/components/HubComponents/ShowHidePassword';
 import InvertedBorderRadiusCard from '@/components/HubComponents/InvertedBorderRadiusCard';
-import { createContext, useState } from 'react';
+import { Dispatch, SetStateAction, createContext, useState } from 'react';
 import { Poppins } from '@next/font/google';
 import { NextFont } from '@next/font';
 import InvertedBorderRadius from '@/components/HubComponents/InvertedBorderRadius';
@@ -16,7 +16,11 @@ type AppContextProps = {
 	currentPage: string;
 	miniatures: MiniatureProps[];
 	font: { poppins: NextFont };
-	setCurrentPage: (newValue: string) => void;
+	windowWidth: number;
+	isMenuOpen: boolean;
+	setCurrentPage: Dispatch<SetStateAction<string>>;
+	setIsMenuOpen: Dispatch<SetStateAction<boolean>>;
+	setWindowWidth: Dispatch<SetStateAction<number>>;
 };
 
 type Props = {
@@ -60,17 +64,32 @@ const miniatures: MiniatureProps[] = [
 
 export const AppContext = createContext<AppContextProps>({
 	currentPage: 'início',
+	windowWidth: 0,
 	miniatures,
 	font: { poppins },
+	isMenuOpen: false,
+	setIsMenuOpen() {},
+	setWindowWidth() {},
 	setCurrentPage() {},
 });
 
 export default function CurrentPageContextProvider({ children }: Props) {
 	const [currentPage, setCurrentPage] = useState('início');
+	const [windowWidth, setWindowWidth] = useState(0);
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	return (
 		<AppContext.Provider
-			value={{ currentPage, miniatures, font: { poppins }, setCurrentPage }}
+			value={{
+				isMenuOpen,
+				currentPage,
+				miniatures,
+				font: { poppins },
+				windowWidth,
+				setIsMenuOpen,
+				setCurrentPage,
+				setWindowWidth,
+			}}
 		>
 			{children}
 		</AppContext.Provider>

@@ -1,18 +1,30 @@
 import { removeDuplicate } from '@/utils/removeDuplicate';
 import S from './AsideContent.module.css';
-import useCurrentPageContext from '@/hooks/useAppContext';
+import useAppContext from '@/hooks/useAppContext';
 
 export default function AsideContent() {
-	const { currentPage, miniatures, setCurrentPage } = useCurrentPageContext();
+	const {
+		currentPage,
+		miniatures,
+		windowWidth,
+		isMenuOpen,
+		setCurrentPage,
+		setIsMenuOpen,
+	} = useAppContext();
 
 	const handleClickCategory = (category: string) => {
 		setCurrentPage(category);
 	};
 
 	const uniqueCategories = removeDuplicate(miniatures);
+	const lessOrEqualThen700 = windowWidth <= 700;
 
 	return (
-		<aside className={S.asideContain}>
+		<aside
+			className={`${lessOrEqualThen700 ? S.asideContainMobile : S.asideContain} ${
+				lessOrEqualThen700 && isMenuOpen ? S.active : ''
+			}`}
+		>
 			<ul>
 				<li
 					className={`${'início' === currentPage ? S.active : ''}`}
@@ -28,6 +40,7 @@ export default function AsideContent() {
 							key={category}
 							className={`${category === currentPage ? S.active : ''}`}
 							onClick={() => {
+								setIsMenuOpen(false);
 								handleClickCategory(category);
 							}}
 						>

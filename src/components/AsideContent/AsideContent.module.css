@@ -1,7 +1,10 @@
 .asideContain {
+	margin-top: 80px;
 	padding: 10px 40px;
 	height: calc(100vh - 80px);
 	width: clamp(250px, 30%, 300px);
+	overflow-y: scroll;
+
 	border-right: 1px solid var(--font-primary);
 }
 
@@ -12,8 +15,44 @@
 	cursor: pointer;
 	margin-bottom: 5px;
 	color: var(--font-primary);
+	white-space: nowrap;
 }
 
 .asideContain ul .active {
+	color: var(--font-secondary);
+}
+
+/*Mobile*/
+
+.asideContainMobile {
+	display: flex;
+	justify-content: center;
+
+	position: absolute;
+	z-index: 2;
+	background-color: var(--background-primary);
+	padding-top: 140px;
+	width: 100%;
+	height: 100vh;
+	overflow-y: scroll;
+	transform: translateX(-200%);
+	transition: 0.3s;
+}
+
+.asideContainMobile.active {
+	transform: translateX(0);
+}
+
+.asideContainMobile ul li {
+	list-style: none;
+	font-weight: 500;
+	font-size: 1.1rem;
+	cursor: pointer;
+	margin-bottom: 5px;
+	color: var(--font-primary);
+	white-space: nowrap;
+}
+
+.asideContainMobile ul .active {
 	color: var(--font-secondary);
 }
