@@ -27,8 +27,9 @@
 
 .headerContainMobile {
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	/* flex-direction: column; */
+	justify-content: space-between;
+	align-items: center;
 
 	position: fixed;
 	width: 100%;
@@ -42,7 +43,7 @@
 
 .logoContainMobile {
 	display: flex;
-	align-items: center;
+	flex-direction: column;
 	justify-content: space-between;
 }
 

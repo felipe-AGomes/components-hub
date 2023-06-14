@@ -28,25 +28,24 @@ export default function Header() {
 				<header className={S.headerContainMobile}>
 					<div className={S.logoContainMobile}>
 						<h1>Componentes React</h1>
-						{isMenuOpen && (
-							<AiOutlineClose
-								style={{ zIndex: '2' }}
-								size={24}
-								onClick={handleMenuOpenClick}
-							/>
-						)}
-						{!isMenuOpen && (
-							<AiOutlineMenu
-								style={{ zIndex: '2' }}
-								size={24}
-								onClick={handleMenuOpenClick}
-							/>
-						)}
+						<div className={S.searchBoxMobile}>
+							<SearchInput />
+						</div>
 					</div>
-					<div className={S.searchBoxMobile}>
-						<SearchInput />
-						<GitHubLink />
-					</div>
+					{isMenuOpen && (
+						<AiOutlineClose
+							style={{ zIndex: '2' }}
+							size={38}
+							onClick={handleMenuOpenClick}
+						/>
+					)}
+					{!isMenuOpen && (
+						<AiOutlineMenu
+							style={{ zIndex: '2' }}
+							size={38}
+							onClick={handleMenuOpenClick}
+						/>
+					)}
 				</header>
 			)}
 		</>
