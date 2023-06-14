@@ -23,7 +23,7 @@ export default function HubComponents({ children }: Props) {
 				height: `calc(100vh - ${lessOrEqualThen700 ? '120px' : '80px'})`,
 				transform: `translateY(${lessOrEqualThen700 ? '120px' : '80px'})`,
 				overflowY: 'scroll',
-				padding: '60px 20px 20px',
+				padding: `60px 20px ${lessOrEqualThen700 ? '80px' : '20px'}`,
 			}}
 		>
 			{children}
