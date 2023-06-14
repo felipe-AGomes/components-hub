@@ -1,5 +1,5 @@
 :root {
-	--background-primary: #fcfcfc;
+	--background-primary: #eee;
 	--font-primary: #4a5568;
 	--font-secondary: #319795;
 	--font-vibrant: #319795;
@@ -30,7 +30,8 @@ body {
 	align-items: center;
 	justify-content: center;
 
-	aspect-ratio: 16/9;
+	/* aspect-ratio: 16/9; */
 	padding: 10px;
+	height: 148px;
 	border-radius: 5px;
 }

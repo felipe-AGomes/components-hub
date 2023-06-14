@@ -26,6 +26,9 @@ export default function ContainMiniature({
 			id={S.containMiniature}
 			style={{ ...style }}
 		>
+			<div className={S.cardTitle}>
+				<h3>{miniature?.name}</h3>
+			</div>
 			<div className={S.containButtonMiniature}>
 				<button
 					onClick={() => {

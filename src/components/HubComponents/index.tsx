@@ -11,9 +11,10 @@ export default function HubComponents({ children }: Props) {
 				gridTemplateRows: 'min-content',
 				justifyContent: 'center',
 				gap: '20px',
+				rowGap: '60px',
 				flexGrow: '1',
 
-				padding: '20px',
+				padding: '60px 20px 20px',
 			}}
 		>
 			{children}
