@@ -28,7 +28,7 @@ export default function Home() {
 						display: 'flex',
 						position: 'fixed',
 						width: '100vw',
-						overflowY: isMenuOpen ? 'hidden' : 'scroll',
+						// overflowY: isMenuOpen ? 'hidden' : 'scroll',
 					}}
 				>
 					<AsideContent />

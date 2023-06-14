@@ -20,8 +20,9 @@ export default function HubComponents({ children }: Props) {
 				flexGrow: '1',
 
 				width: '100%',
-				height: 'calc(100vh - 140px)',
-				marginTop: lessOrEqualThen700 ? '120px' : '80px',
+				height: `calc(100vh - ${lessOrEqualThen700 ? '120px' : '80px'})`,
+				transform: `translateY(${lessOrEqualThen700 ? '120px' : '80px'})`,
+				overflowY: 'scroll',
 				padding: '60px 20px 20px',
 			}}
 		>
