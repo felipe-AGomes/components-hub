@@ -6,7 +6,7 @@ import HtmlHeader from '@/components/HtmlHeader';
 import HubComponents from '@/components/HubComponents';
 import { filterByNameOrCategory } from '@/functions/filterByNameOrCategory';
 import useAppContext from '@/hooks/useAppContext';
-import { filterCategory } from '@/utils/filterCategory';
+import { filterCategory } from '@/functions/filterCategory';
 import { useEffect, useState } from 'react';
 
 export default function Home() {

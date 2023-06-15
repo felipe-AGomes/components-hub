@@ -1,4 +1,4 @@
-import { removeDuplicate } from '@/utils/removeDuplicate';
+import { removeCategoryDuplicate } from '@/functions/removeCategoryDuplicate';
 import S from './AsideContent.module.css';
 import useAppContext from '@/hooks/useAppContext';
 
@@ -16,7 +16,7 @@ export default function AsideContent() {
 		setCurrentPage(category);
 	};
 
-	const uniqueCategories = removeDuplicate(miniatures);
+	const uniqueCategories = removeCategoryDuplicate(miniatures);
 	const lessOrEqualThen700 = windowWidth <= 700;
 
 	return (

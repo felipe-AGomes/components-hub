@@ -1,5 +1,6 @@
 import { MiniatureProps } from '@/@types';
 import S from './ContainMiniature.module.css';
+import { clickMiniature } from '@/functions/clickMiniature';
 
 type Props = {
 	children: React.ReactNode;
@@ -7,19 +8,13 @@ type Props = {
 	miniature?: MiniatureProps;
 };
 
+const { handleClickRepositorio, handleClickVizualizar } = clickMiniature();
+
 export default function ContainMiniature({
 	children,
 	miniature,
 	style,
 }: Props) {
-	const handleClickVizualizar = (miniatureId: string) => {
-		window.open(`/project/${miniatureId}`, '_blank');
-	};
-
-	const handleClickRepositorio = (miniatureRepo: string) => {
-		window.open(miniatureRepo, '_blank');
-	};
-
 	return (
 		<section
 			className='component__page-miniature'

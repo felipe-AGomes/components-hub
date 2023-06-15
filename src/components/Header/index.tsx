@@ -3,7 +3,6 @@ import SearchInput from '../SearchInput';
 import GitHubLink from '../GitHubLink';
 import useAppContext from '@/hooks/useAppContext';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import { useState } from 'react';
 
 export default function Header() {
 	const { windowWidth, isMenuOpen, setIsMenuOpen } = useAppContext();
