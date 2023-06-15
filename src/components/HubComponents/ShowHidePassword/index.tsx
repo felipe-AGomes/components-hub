@@ -46,7 +46,7 @@ export default function ShowHidePassword({ isMiniature, miniature }: Props) {
 								className={`${isHide ? S.activeMiniature : ''}`}
 								stroke='#00dfc4'
 								fill='#00dfc4'
-								stroke-width='0'
+								strokeWidth='0'
 								viewBox='0 0 512 512'
 								height='100%'
 								width='100%'
@@ -54,9 +54,9 @@ export default function ShowHidePassword({ isMiniature, miniature }: Props) {
 							>
 								<path
 									fill='none'
-									stroke-linecap='round'
-									stroke-linejoin='round'
-									stroke-width='32'
+									strokeLinecap='round'
+									strokeLinejoin='round'
+									strokeWidth='32'
 									d='M255.66 112c-77.94 0-157.89 45.11-220.83 135.33a16 16 0 00-.27 17.77C82.92 340.8 161.8 400 255.66 400c92.84 0 173.34-59.38 221.79-135.25a16.14 16.14 0 000-17.47C428.89 172.28 347.8 112 255.66 112z'
 								></path>
 								<circle
@@ -64,8 +64,8 @@ export default function ShowHidePassword({ isMiniature, miniature }: Props) {
 									cy='256'
 									r='80'
 									fill='none'
-									stroke-miterlimit='10'
-									stroke-width='32'
+									strokeMiterlimit='10'
+									strokeWidth='32'
 								></circle>
 							</svg>
 							<svg
@@ -73,7 +73,7 @@ export default function ShowHidePassword({ isMiniature, miniature }: Props) {
 								className={`${isHide ? '' : S.activeMiniature}`}
 								stroke='#00dfc4'
 								fill='#00dfc4'
-								stroke-width='0'
+								strokeWidth='0'
 								viewBox='0 0 512 512'
 								height='100%'
 								width='100%'
@@ -106,7 +106,7 @@ export default function ShowHidePassword({ isMiniature, miniature }: Props) {
 								className={`${isHide ? S.active : ''}`}
 								stroke='#00dfc4'
 								fill='#00dfc4'
-								stroke-width='0'
+								strokeWidth='0'
 								viewBox='0 0 512 512'
 								height='100%'
 								width='100%'
@@ -114,9 +114,9 @@ export default function ShowHidePassword({ isMiniature, miniature }: Props) {
 							>
 								<path
 									fill='none'
-									stroke-linecap='round'
-									stroke-linejoin='round'
-									stroke-width='32'
+									strokeLinecap='round'
+									strokeLinejoin='round'
+									strokeWidth='32'
 									d='M255.66 112c-77.94 0-157.89 45.11-220.83 135.33a16 16 0 00-.27 17.77C82.92 340.8 161.8 400 255.66 400c92.84 0 173.34-59.38 221.79-135.25a16.14 16.14 0 000-17.47C428.89 172.28 347.8 112 255.66 112z'
 								></path>
 								<circle
@@ -124,8 +124,8 @@ export default function ShowHidePassword({ isMiniature, miniature }: Props) {
 									cy='256'
 									r='80'
 									fill='none'
-									stroke-miterlimit='10'
-									stroke-width='32'
+									strokeMiterlimit='10'
+									strokeWidth='32'
 								></circle>
 							</svg>
 							<svg
@@ -133,7 +133,7 @@ export default function ShowHidePassword({ isMiniature, miniature }: Props) {
 								className={`${isHide ? '' : S.active}`}
 								stroke='#00dfc4'
 								fill='#00dfc4'
-								stroke-width='0'
+								strokeWidth='0'
 								viewBox='0 0 512 512'
 								height='100%'
 								width='100%'
