@@ -18,6 +18,8 @@ type AppContextProps = {
 	font: { poppins: NextFont };
 	windowWidth: number;
 	isMenuOpen: boolean;
+	searchByNameOrCategory: string;
+	setSearchByNameOrCategory: Dispatch<SetStateAction<string>>;
 	setCurrentPage: Dispatch<SetStateAction<string>>;
 	setIsMenuOpen: Dispatch<SetStateAction<boolean>>;
 	setWindowWidth: Dispatch<SetStateAction<number>>;
@@ -68,6 +70,8 @@ export const AppContext = createContext<AppContextProps>({
 	miniatures,
 	font: { poppins },
 	isMenuOpen: false,
+	searchByNameOrCategory: '',
+	setSearchByNameOrCategory() {},
 	setIsMenuOpen() {},
 	setWindowWidth() {},
 	setCurrentPage() {},
@@ -77,6 +81,7 @@ export default function CurrentPageContextProvider({ children }: Props) {
 	const [currentPage, setCurrentPage] = useState('início');
 	const [windowWidth, setWindowWidth] = useState(0);
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const [searchByNameOrCategory, setSearchByNameOrCategory] = useState('');
 
 	return (
 		<AppContext.Provider
@@ -86,6 +91,8 @@ export default function CurrentPageContextProvider({ children }: Props) {
 				miniatures,
 				font: { poppins },
 				windowWidth,
+				searchByNameOrCategory,
+				setSearchByNameOrCategory,
 				setIsMenuOpen,
 				setCurrentPage,
 				setWindowWidth,
