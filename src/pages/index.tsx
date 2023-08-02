@@ -8,6 +8,7 @@ import { filterByNameOrCategory } from '@/functions/filterByNameOrCategory';
 import useAppContext from '@/hooks/useAppContext';
 import { filterCategory } from '@/functions/filterCategory';
 import { useEffect, useState } from 'react';
+import { generateDigitalSignature } from 'assinatura-digital';
 
 export default function Home() {
 	const {
@@ -21,6 +22,13 @@ export default function Home() {
 		null,
 	);
 	const filteredByCategory = filterCategory(miniatures, currentPage);
+	console.clear();
+	const transformedSignature = generateDigitalSignature(
+		'felipe-dev',
+		'falmeidagomes13@gmail.com',
+		'Bem-vindo ao meu site! Sinta-se à vontade para explorar e desenvolver com paixão!',
+	);
+	console.log(...transformedSignature);
 	useEffect(() => {
 		setWindowWidth(window.innerWidth);
 		window.addEventListener('resize', () => {
